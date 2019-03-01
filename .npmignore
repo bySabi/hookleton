@@ -1,0 +1,10 @@
+node_modules
+coverage
+.cache
+.next
+attic
+example
+tests
+
+.prettierrc
+.editorconfig

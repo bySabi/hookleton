@@ -1,0 +1,22 @@
+{
+  "name": "hookleton-example",
+  "version": "0.0.1",
+  "description": "Hookleton example",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "keywords": [
+    "Example",
+    "Hookleton"
+  ],
+  "author": "Félix A.A. <bysabi.files@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "next": "^8.0.2",
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3"
+  }
+}
