@@ -8,3 +8,5 @@ tests
 
 .prettierrc
 .editorconfig
+rollup.config.js
+travis.yml
