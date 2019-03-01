@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import createHook from '../component';
+import createHook from 'hookleton';
 
 const initial = ['Do one', 'Do two', 'Do three'];
 

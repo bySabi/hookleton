@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import createHook from '../component';
+import createHook from 'hookleton';
 
 // useCounter is a useState but global
 const useCounter = createHook(useState);

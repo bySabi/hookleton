@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import createHook from '../component';
+import createHook from 'hookleton';
 
 const useMousePosition = createHook(() => {
   const [position, setPosition] = useState({ x: null, y: null });

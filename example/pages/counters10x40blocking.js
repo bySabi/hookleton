@@ -1,5 +1,5 @@
 import { useState, useLayoutEffect } from 'react';
-import { createHookWithClass, Hookleton } from '../component';
+import { createHookWithClass, Hookleton } from 'hookleton';
 
 class Hookleton2 extends Hookleton {
   useOnFirst() {
