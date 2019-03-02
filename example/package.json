@@ -7,7 +7,7 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "export": "next export"
+    "export": "cross-env NODE_ENV=production next build && cross-env NODE_ENV=production next export -o ../"
   },
   "keywords": [
     "Example",
@@ -20,5 +20,8 @@
     "next": "^8.0.2",
     "react": "^16.8.3",
     "react-dom": "^16.8.3"
+  },
+  "devDependencies": {
+    "cross-env": "^5.2.0"
   }
 }
