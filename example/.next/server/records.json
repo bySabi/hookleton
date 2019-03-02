@@ -39,21 +39,32 @@
       "static/3p6drjE7_5vsi_3eKUbUh/pages/fetch.js": 7,
       "static/3p6drjE7_5vsi_3eKUbUh/pages/index.js": 8,
       "static/3p6drjE7_5vsi_3eKUbUh/pages/mouse.js": 9,
-      "static/3p6drjE7_5vsi_3eKUbUh/pages/todo.js": 10
+      "static/3p6drjE7_5vsi_3eKUbUh/pages/todo.js": 10,
+      "static/YjfQTmUFBqbXmxskmYvyU/pages/_app.js": 11,
+      "static/YjfQTmUFBqbXmxskmYvyU/pages/_document.js": 12,
+      "static/YjfQTmUFBqbXmxskmYvyU/pages/_error.js": 13,
+      "static/YjfQTmUFBqbXmxskmYvyU/pages/counter.js": 14,
+      "static/YjfQTmUFBqbXmxskmYvyU/pages/counters10x40.js": 15,
+      "static/YjfQTmUFBqbXmxskmYvyU/pages/counters10x40blocking.js": 16,
+      "static/YjfQTmUFBqbXmxskmYvyU/pages/counters5x5.js": 17,
+      "static/YjfQTmUFBqbXmxskmYvyU/pages/fetch.js": 18,
+      "static/YjfQTmUFBqbXmxskmYvyU/pages/index.js": 19,
+      "static/YjfQTmUFBqbXmxskmYvyU/pages/mouse.js": 20,
+      "static/YjfQTmUFBqbXmxskmYvyU/pages/todo.js": 21
     },
     "bySource": {},
     "usedIds": [
-      0,
-      1,
-      10,
-      2,
-      3,
-      4,
-      5,
-      6,
-      7,
-      8,
-      9
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21
     ]
   }
 }

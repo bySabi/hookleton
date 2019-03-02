@@ -21,23 +21,33 @@
       "static/3p6drjE7_5vsi_3eKUbUh/pages/index.js": 9,
       "static/3p6drjE7_5vsi_3eKUbUh/pages/mouse.js": 10,
       "static/3p6drjE7_5vsi_3eKUbUh/pages/todo.js": 11,
-      "static/runtime/main.js": 12
+      "static/runtime/main.js": 12,
+      "static/YjfQTmUFBqbXmxskmYvyU/pages/_app.js": 13,
+      "static/YjfQTmUFBqbXmxskmYvyU/pages/_error.js": 14,
+      "static/YjfQTmUFBqbXmxskmYvyU/pages/counter.js": 15,
+      "static/YjfQTmUFBqbXmxskmYvyU/pages/counters10x40.js": 16,
+      "static/YjfQTmUFBqbXmxskmYvyU/pages/counters10x40blocking.js": 17,
+      "static/YjfQTmUFBqbXmxskmYvyU/pages/counters5x5.js": 18,
+      "static/YjfQTmUFBqbXmxskmYvyU/pages/fetch.js": 19,
+      "static/YjfQTmUFBqbXmxskmYvyU/pages/index.js": 20,
+      "static/YjfQTmUFBqbXmxskmYvyU/pages/mouse.js": 21,
+      "static/YjfQTmUFBqbXmxskmYvyU/pages/todo.js": 22
     },
     "bySource": {},
     "usedIds": [
       0,
       1,
-      10,
-      11,
       12,
-      2,
-      3,
-      4,
-      5,
-      6,
-      7,
-      8,
-      9
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22
     ]
   }
 }
