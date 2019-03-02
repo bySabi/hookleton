@@ -1,4 +1,8 @@
-# Hookleton
+<h1 align="center">
+  <img src="https://raw.githubusercontent.com/bySabi/hookleton/master/images/Hookleton.png" width="200"/>
+  <br/>
+  <p align="center" style="font-size: 0.5em">The globalizer Hook Pattern</p>
+</h1>
 
 [![npm](https://img.shields.io/npm/v/hookleton.svg)](https://www.npmjs.com/package/hookleton)
 [![npm downloads](https://img.shields.io/npm/dm/hookleton.svg?style=flat-square)](https://www.npmjs.com/package/hookleton)
