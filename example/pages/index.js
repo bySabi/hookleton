@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from '../component/Link';
 
 export default () => (
   <div style={{ textAlign: 'center' }}>

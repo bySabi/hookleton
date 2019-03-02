@@ -5,5 +5,7 @@ coverage
 dist
 .cache
 .next
+_next
+example/out
 attic
 package-lock.json

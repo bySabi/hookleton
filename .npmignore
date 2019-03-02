@@ -3,6 +3,7 @@ node_modules
 coverage
 .cache
 .next
+_next
 attic
 example
 tests

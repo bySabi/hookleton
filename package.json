@@ -67,10 +67,12 @@
     }
   },
   "lint-staged": {
-    "/**/*.js*": [
-      "pretty-quick --staged",
-      "git add"
-    ],
+    "linters": {
+      "/**/*.js*": [
+        "pretty-quick --staged",
+        "git add"
+      ]
+    },
     "ignore": [
       "lib"
     ]
