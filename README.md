@@ -60,7 +60,7 @@ Make sure you update that value, `hookOut[0]`, if you want the changes to be not
 
 An example, in case it has not been clear:
 
-```
+```javascript
 const useExample = createHook(() => {
    const [, setState] = useState(0);
    return ['any value', setState];
@@ -75,7 +75,7 @@ A simple example is worth a thousand words
 
 [page](https://yvjkpvn95v.sse.codesandbox.io/counter) | [source](./example/pages/counter.js)
 
-```
+```javascript
 import { useState } from 'react';
 import createHook from 'hookleton';
 
@@ -156,7 +156,7 @@ Hookletons can be used in all kinds of projects, both large and small. Remember 
 3. `initial` values passed to **non-host** components will be **ignored**
 4. If the host component is **unmounted**, the references to the array, `the source of truth`, will be undefined. To ensure that this does not happen, you can create a component that acts as the host of the hookleton or several of them at the top of the component hierarchy, Ex:
 
-```
+```javascript
 
 const Hookletons = () => {
   useExample1(0);
