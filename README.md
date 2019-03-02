@@ -118,14 +118,14 @@ Examples [page](https://bysabi.github.io/hookleton/) | [codesandbox](https://cod
 - _Todo App_ [page](https://bysabi.github.io/hookleton/todo/) | [source](./example/pages/todo.js)
 - a _Mouse_ event listener that notify `{x,y}` position to 600 components in Real Time [page](https://bysabi.github.io/hookleton/mouse/) | [source](./example/pages/mouse.js)
 - basic _Counter_ showed above [page](https://bysabi.github.io/hookleton/counter/) | [source](./example/pages/counter.js)
-- 5 counters in 25 components. Include a basic `global store` [page](hhttps://bysabi.github.io/hookleton/counters5x5/) | [source](./example/pages/counters5x5.js)
+- 5 counters in 25 components. Include a basic `global store` [page](https://bysabi.github.io/hookleton/counters5x5/) | [source](./example/pages/counters5x5.js)
 - 5 counters in 400 components. Default non-blocking renderer [page](https://bysabi.github.io/hookleton/counters10x40/) | [source](./example/pages/counters10x40.js)
 - 5 counters in 400 components. With a custom blocking renderer [page](https://bysabi.github.io/hookleton/counters10x40blocking/) | [source](./example/pages/counters10x40blocking.js)
 - showing Fetched 10 random users data in 16 components [page](https://bysabi.github.io/hookleton/fetch/) | [source](./example/pages/fetch.js)
 
 # Why and When use Hookletons
 
-The first reason is _simplicity_, but obviously this explanation is not enough. Let's do some history:
+The first reason is _simplicity_, but obviously this explanation is not enough. Let's do some history. <br/>
 A cloudy day googling I was looking for the simplest possible alternative to _Redux_. For a toy project I needed to share a couple of values between components in the simplest way possible. I found several packages but I did not like any, mainly for two reasons.
 
 - They force you to use **Providers**, **Context** objects or **HOC** wrappers
