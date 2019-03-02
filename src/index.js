@@ -92,3 +92,8 @@ export class Hookleton {
 // Update negating '~' his current state. This force to rerender it
 const wrapUpdater = updater => () => updater(forceUpdate);
 const forceUpdate = s => ~s;
+
+// Mixed default and named exports workaround: https://github.com/developit/microbundle/issues/306
+Object.defineProperty(exports, '__esModule', {
+  value: true,
+});
