@@ -7,7 +7,10 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "export": "cross-env NODE_ENV=production next build && cross-env NODE_ENV=production next export -o ../"
+    "export:gh-pages": "next build && next export && node misc/copyStatic.js",
+    "export:local": "NODE_ENV=development next build && NODE_ENV=development next export && node misc/copyStatic.js",
+    "cleanup": "node misc/removeStatic.js",
+    "deploy": "npm run cleanup && npm run export:gh-pages && cp -fr out/* ../"
   },
   "keywords": [
     "Example",
@@ -22,6 +25,6 @@
     "react-dom": "^16.8.3"
   },
   "devDependencies": {
-    "cross-env": "^5.2.0"
+    "fs-extra": "^7.0.1"
   }
 }
