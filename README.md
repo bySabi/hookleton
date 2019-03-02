@@ -149,10 +149,8 @@ Hookletons can be used in all kinds of projects, both large and small. Remember 
 
 1. If element **1** of the returned _array_ does not change, the users of the hookleton will not be notified
 2. There are two ways to set the initial value of the hookleton. When created with `createHook` and when it is called from the host component.
-
-- The value passed in `createHook` creation has priority
-- If it is `undefined` in _createHook_, the value set in the `host` component will be used. There is only one _host_ component, **the first one**
-
+    - The value passed in `createHook` creation has priority
+    - If it is `undefined` in _createHook_, the value set in the `host` component will be used. There is only one _host_ component, **the first one**
 3. `initial` values passed to **non-host** components will be **ignored**
 4. If the host component is **unmounted**, the references to the array, `the source of truth`, will be undefined. To ensure that this does not happen, you can create a component that acts as the host of the hookleton or several of them at the top of the component hierarchy, Ex:
 
