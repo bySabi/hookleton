@@ -1,0 +1,59 @@
+{
+  "modules": {
+    "byIdentifier": {
+      "multi private-next-pages/counter.js": 0,
+      "multi private-next-pages/counters10x40.js": 1,
+      "multi private-next-pages/counters10x40blocking.js": 2,
+      "multi private-next-pages/counters5x5.js": 3,
+      "multi private-next-pages/fetch.js": 4,
+      "multi private-next-pages/index.js": 5,
+      "multi private-next-pages/mouse.js": 6,
+      "multi private-next-pages/todo.js": 7,
+      "multi next/dist/pages/_app": 8,
+      "multi next/dist/pages/_error": 9,
+      "multi next/dist/pages/_document": 10
+    },
+    "usedIds": {
+      "0": 0,
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5,
+      "6": 6,
+      "7": 7,
+      "8": 8,
+      "9": 9,
+      "10": 10
+    }
+  },
+  "chunks": {
+    "byName": {
+      "static/Eog1zzBB0dNWUIv7X63~z/pages/_app.js": 0,
+      "static/Eog1zzBB0dNWUIv7X63~z/pages/_document.js": 1,
+      "static/Eog1zzBB0dNWUIv7X63~z/pages/_error.js": 2,
+      "static/Eog1zzBB0dNWUIv7X63~z/pages/counter.js": 3,
+      "static/Eog1zzBB0dNWUIv7X63~z/pages/counters10x40.js": 4,
+      "static/Eog1zzBB0dNWUIv7X63~z/pages/counters10x40blocking.js": 5,
+      "static/Eog1zzBB0dNWUIv7X63~z/pages/counters5x5.js": 6,
+      "static/Eog1zzBB0dNWUIv7X63~z/pages/fetch.js": 7,
+      "static/Eog1zzBB0dNWUIv7X63~z/pages/index.js": 8,
+      "static/Eog1zzBB0dNWUIv7X63~z/pages/mouse.js": 9,
+      "static/Eog1zzBB0dNWUIv7X63~z/pages/todo.js": 10
+    },
+    "bySource": {},
+    "usedIds": [
+      0,
+      1,
+      10,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  }
+}

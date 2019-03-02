@@ -1,0 +1,43 @@
+{
+  "modules": {
+    "byIdentifier": {
+      "multi node_modules/next/dist/client/next": 0
+    },
+    "usedIds": {
+      "0": 0
+    }
+  },
+  "chunks": {
+    "byName": {
+      "commons": 0,
+      "static/runtime/webpack.js": 1,
+      "static/Eog1zzBB0dNWUIv7X63~z/pages/_app.js": 2,
+      "static/Eog1zzBB0dNWUIv7X63~z/pages/_error.js": 3,
+      "static/Eog1zzBB0dNWUIv7X63~z/pages/counter.js": 4,
+      "static/Eog1zzBB0dNWUIv7X63~z/pages/counters10x40.js": 5,
+      "static/Eog1zzBB0dNWUIv7X63~z/pages/counters10x40blocking.js": 6,
+      "static/Eog1zzBB0dNWUIv7X63~z/pages/counters5x5.js": 7,
+      "static/Eog1zzBB0dNWUIv7X63~z/pages/fetch.js": 8,
+      "static/Eog1zzBB0dNWUIv7X63~z/pages/index.js": 9,
+      "static/Eog1zzBB0dNWUIv7X63~z/pages/mouse.js": 10,
+      "static/Eog1zzBB0dNWUIv7X63~z/pages/todo.js": 11,
+      "static/runtime/main.js": 12
+    },
+    "bySource": {},
+    "usedIds": [
+      0,
+      1,
+      10,
+      11,
+      12,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  }
+}
