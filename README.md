@@ -15,7 +15,7 @@ When this Hook is **use***d* for the first time its `host` component will become
 
 That said, it might sound a bit complicated but it is not. `Hookleton` was created thinking about the ease of use even for an occasional user with the minimum effort. It is likely that when you try it you will not want to use something else because there simply is nothing easier out there.
 
-*Hookleton* make your live a little more easy? Consider <a href="https://www.buymeacoffee.com/4H8KhlSxM" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
+Does *Hookleton* make your life a little more easy? Consider <a href="https://www.buymeacoffee.com/4H8KhlSxM" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
 
 ## Benefits
 
