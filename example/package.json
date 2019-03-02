@@ -7,7 +7,7 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "export": "next export && node misc/copyStatic.js",
+    "export": "npm run build && next export && node misc/copyStatic.js",
     "deploy": "cp -fr out/* ../"
   },
   "keywords": [
