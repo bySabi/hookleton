@@ -29,7 +29,7 @@ Does *Hookleton* make your life a little more easy? Consider <a href="https://ww
 
 ## Install
 
-- NPM: `npm install hookleton`
+- NPM: `npm i hookleton`
 - Yarn: `yarn add hookleton`
 
 ## How it works
