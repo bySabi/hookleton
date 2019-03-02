@@ -1,6 +1,6 @@
 {
   "name": "hookleton",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "globalize your React Hooks without fear using the Hookleton Pattern",
   "main": "lib/index.js",
   "umd:main": "lib/index.umd.js",
