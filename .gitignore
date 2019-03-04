@@ -7,4 +7,5 @@ dist
 .next
 _next
 attic
+example/out
 package-lock.json
