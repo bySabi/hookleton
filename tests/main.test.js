@@ -100,7 +100,7 @@ test('should set new Host on Host unmount', () => {
   expect(count).toBe(4);
 });
 
-test('should promote non-Host to new Host on Host unmount', () => {
+test('should non-Host continue life after Host unmount and new Host is mounted', () => {
   const { unmount } = renderHook(() => useCounter(1)); // render Hookleton Host
 
   let count;
