@@ -50,7 +50,7 @@
     "pretty-quick": "^1.10.0",
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
-    "react-hooks-testing-library": "^0.3.4",
+    "react-hooks-testing-library": "^0.3.6",
     "rollup": "^1.4.0",
     "rollup-plugin-babel": "^4.3.2",
     "rollup-plugin-cleanup": "^3.1.1",
@@ -59,6 +59,12 @@
   "peerDependencies": {
     "react": "*"
   },
+  "browserslist": [
+    "last 2 version",
+    "> 0.25%",
+    "maintained node versions",
+    "not dead"
+  ],
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"

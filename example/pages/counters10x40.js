@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import createHook from 'hookleton';
+import { createHook } from 'hookleton';
 
 const stores = new Map();
 

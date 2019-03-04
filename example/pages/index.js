@@ -1,4 +1,4 @@
-import Link from '../component/Link';
+import Link from 'next/link';
 
 export default () => (
   <div style={{ textAlign: 'center' }}>
@@ -37,6 +37,29 @@ export default () => (
       <li>
         <Link href="/fetch">
           <a>Fetch</a>
+        </Link>
+      </li>
+      <li>
+        <p>----- Hookleton vs React Context -----</p>
+      </li>
+      <li>
+        <Link href="/counterContext">
+          <a>context-based Counter</a>
+        </Link>
+      </li>
+      <li>
+        <Link href="/counterHookleton">
+          <a>hookleton Counter</a>
+        </Link>
+      </li>
+      <li>
+        <Link href="/mouseContext">
+          <a>context-based Mouse</a>
+        </Link>
+      </li>
+      <li>
+        <Link href="/mouseHookleton">
+          <a>hookleton Mouse</a>
         </Link>
       </li>
     </ul>
