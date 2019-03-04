@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
-import createHook from 'hookleton';
+import { createHook } from 'hookleton';
 
 const URL = 'https://randomuser.me/api/?results=10';
 

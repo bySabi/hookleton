@@ -38,13 +38,23 @@ const TableMouse = () => (
   </table>
 );
 
+let c = 0;
+const Any = () => {
+  useEffect(() => () => (c = 0), []);
+  return <p style={{ color: 'red' }}>I should be rendered ONE time but: {++c}</p>;
+};
+
 // repeat <TableMouse /> 50 times
 export default () => (
-  <ul style={{ listStyle: 'none' }}>
-    {Array.from({ length: 50 }).map((_, idx) => (
-      <li key={idx}>
-        <TableMouse />
-      </li>
-    ))}
-  </ul>
+  <>
+    <Any />
+    <ul style={{ listStyle: 'none' }}>
+      {Array.from({ length: 50 }).map((_, idx) => (
+        <li key={idx}>
+          <TableMouse />
+        </li>
+      ))}
+    </ul>
+    <Any />
+  </>
 );

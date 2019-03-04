@@ -7,9 +7,8 @@ git checkout gh-pages
 cd example
 npm i
 npm run export:local
-npm i -g serve
 cd out
-serve
+npx serve
 ```
 
 ## Export gh-pages and deploy

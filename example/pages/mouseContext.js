@@ -1,7 +1,6 @@
-import { useState, useEffect } from 'react';
-import { createHook } from 'hookleton';
+import React, { useState, useEffect, useContext } from 'react';
 
-const useMousePosition = createHook(() => {
+const useMousePosition = () => {
   const [position, setPosition] = useState({ x: null, y: null });
 
   const handleMouseMove = e => setPosition({ x: e.pageX, y: e.pageY });
@@ -12,10 +11,12 @@ const useMousePosition = createHook(() => {
   }, []);
 
   return [position];
-});
+};
+
+const MouseContext = React.createContext();
 
 const Mouse = () => {
-  const [mousePosition] = useMousePosition();
+  const { mousePosition } = useContext(MouseContext);
   return (
     <div style={{ borderStyle: 'solid' }}>
       x: {mousePosition.x}, y: {mousePosition.y}
@@ -38,13 +39,25 @@ const TableMouse = () => (
   </table>
 );
 
+let c = 0;
+const Any = () => {
+  useEffect(() => () => (c = 0), []);
+  return <p style={{ color: 'red' }}>I should be rendered ONE time but: {++c}</p>;
+};
+
 // repeat <TableMouse /> 50 times
-export default () => (
-  <ul style={{ listStyle: 'none' }}>
-    {Array.from({ length: 50 }).map((_, idx) => (
-      <li key={idx}>
-        <TableMouse />
-      </li>
-    ))}
-  </ul>
-);
+export default function App() {
+  const [mousePosition] = useMousePosition();
+  return (
+    <MouseContext.Provider value={{ mousePosition }}>
+      <Any />
+      <ul style={{ listStyle: 'none' }}>
+        {Array.from({ length: 50 }).map((_, idx) => (
+          <li key={idx}>
+            <TableMouse />
+          </li>
+        ))}
+      </ul>
+    </MouseContext.Provider>
+  );
+}

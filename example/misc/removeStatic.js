@@ -11,6 +11,10 @@ const RM = [
   '../fetch',
   '../mouse',
   '../todo',
+  '../counterContext',
+  '../counterHookleton',
+  '../mouseContext',
+  '../mouseHookleton',
   '../index.html'
 ];
 

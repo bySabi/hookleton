@@ -2,9 +2,9 @@ import { useState, useLayoutEffect } from 'react';
 import { createHookWithClass, Hookleton } from 'hookleton';
 
 class Hookleton2 extends Hookleton {
-  useOnFirst() {
-    useLayoutEffect(this.__updateRest.bind(this), [this._hookOut[0]]);
-    return this._hookOut;
+  useHost() {
+    useLayoutEffect(this._notify2.bind(this), [this._o[0]]);
+    return this._o;
   }
 }
 

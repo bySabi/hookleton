@@ -14,6 +14,10 @@ module.exports = {
     '/counters10x40': { page: '/counters10x40' },
     '/counters10x40blocking': { page: '/counters10x40blocking' },
     '/fetch': { page: '/fetch' },
+    '/counterContext': { page: '/counterContext' },
+    '/counterHookleton': { page: '/counterHookleton' },
+    '/mouseContext': { page: '/mouseContext' },
+    '/mouseHookleton': { page: '/mouseHookleton' }
   }),
   assetPrefix: assetPrefix,
   webpack: config => {
