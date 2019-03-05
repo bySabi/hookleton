@@ -55,7 +55,7 @@ export class Hookleton {
 
   // Use a custom function `_notify2` that ignore first render, defined on '_init'
   useHost() {
-    // notify non-host on each `_o[0` update
+    // notify non-host on each `_out[0]` update
     useEffect(() => this._notify2(), [this._out[0]]);
     return this._out;
   }
