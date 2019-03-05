@@ -7,27 +7,26 @@ export function createHook(useHook, ...initialArgs) {
 export function createHookWithClass(HookletonClass, useHook, ...initialArgs) {
   const hookleton = new HookletonClass(useHook, initialArgs);
   const use = hookleton.use.bind(hookleton);
-  use.get = () => hookleton._o;
+  use.get = () => hookleton._o; // inject a 'get' for use it standalone
   return use;
 }
 
 export class Hookleton {
   constructor(useHook, initialArgs) {
-    this._hook = useHook;
-    this._a = initialArgs;
+    this._hook = useHook; // a const value. Don't mutate it
+    this._a = initialArgs; // a const value. Don't mutate it
     this._up = new Map(); // non-Host updaters container
-    this._h = false; // have 'Host' flag
-    /* this._o = [] is "The source of Truth" */
+    this._h = false; // the have 'Host' flag
+    /* this._o is "The source of Truth", create on _init */
   }
 
   use(...initialArgs) {
-    // refUse can have 3 states when a componet call `use Hook`
-    //  undefined --> when called the first time, `use Hook` is still unset
-    //       true --> `use Hook` is set and the current component is the hookleton 'Host'
-    // a function --> current component is a user, a non-Host, of the hookleton
+    // refUse.current could have two states
+    // 'true' --> Host  and  'false' --> non-Host
     const refUse = useRef(false);
 
-    // `_init` change when Host is unmounted and a new Host must be promote
+    // create 'The source of truth', init '_arg' and setup Host
+    // will run on 'first' render only
     useMemo(() => this._init({ refUse, initialArgs }), []);
 
     // This is the hookleton Host
@@ -35,14 +34,14 @@ export class Hookleton {
       // The call to provided `useHook`
       this._o = this._hook(...this._arg); // return "The source of truth"
 
-      // Checked on 'first' render
+      // Checked on 'first' render only
       useMemo(() => {
         if (!Array.isArray(this._o)) {
           throw new Error('[Hookleton] provided Hook must return array values');
         }
       }, []);
 
-      // Reset `_host` flag on unmount
+      // Reset have 'Host' flag on unmount
       useLayoutEffect(() => () => (this._h = false), []);
 
       // Lifecycle hook: `on render Host`
@@ -50,12 +49,13 @@ export class Hookleton {
     }
 
     // Lifecycle hook: `on render non-Host`
+    // non-Host initial is ignore but this value could be use by extenders
     return this.useNonHost(initialArgs);
   }
 
-  // Here we use a custom function `_notify2` that ignore first render call,
-  // that is defined on `this._init`
+  // Use a custom function `_notify2` that ignore first render, defined on '_init'
   useHost() {
+    // notify non-host on each `_o[0` update
     useEffect(() => this._notify2(), [this._o[0]]);
     return this._o;
   }
@@ -75,7 +75,7 @@ export class Hookleton {
   }
 
   _init({ refUse, initialArgs }) {
-    if (this._h === false) {
+    if (!this._h) {
       // we have 'Host'
       this._h = true;
 
