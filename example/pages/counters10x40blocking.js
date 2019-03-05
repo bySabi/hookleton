@@ -3,8 +3,8 @@ import { createHookWithClass, Hookleton } from 'hookleton';
 
 class Hookleton2 extends Hookleton {
   useHost() {
-    useLayoutEffect(this._notify2.bind(this), [this._o[0]]);
-    return this._o;
+    useLayoutEffect(this._notify2.bind(this), [this._out[0]]);
+    return this._out;
   }
 }
 

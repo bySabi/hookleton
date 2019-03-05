@@ -7,7 +7,7 @@ export function createHook(useHook, ...initialArgs) {
 export function createHookWithClass(HookletonClass, useHook, ...initialArgs) {
   const hookleton = new HookletonClass(useHook, initialArgs);
   const use = hookleton.use.bind(hookleton);
-  use.get = () => hookleton._o; // inject a 'get' for use it standalone
+  use.get = () => hookleton._out; // inject a 'get' for use it standalone
   return use;
 }
 
@@ -17,7 +17,7 @@ export class Hookleton {
     this._a = initialArgs; // a const value. Don't mutate it
     this._up = new Map(); // non-Host updaters container
     this._h = false; // the have 'Host' flag
-    /* this._o is "The source of Truth", create on _init */
+    /* this._out is "The source of Truth", create on _init */
   }
 
   use(...initialArgs) {
@@ -32,11 +32,11 @@ export class Hookleton {
     // This is the hookleton Host
     if (refUse.current) {
       // The call to provided `useHook`
-      this._o = this._hook(...this._arg); // return "The source of truth"
+      this._out = this._hook(...this._arg); // return "The source of truth"
 
       // Checked on 'first' render only
       useMemo(() => {
-        if (!Array.isArray(this._o)) {
+        if (!Array.isArray(this._out)) {
           throw new Error('[Hookleton] provided Hook must return array values');
         }
       }, []);
@@ -56,8 +56,8 @@ export class Hookleton {
   // Use a custom function `_notify2` that ignore first render, defined on '_init'
   useHost() {
     // notify non-host on each `_o[0` update
-    useEffect(() => this._notify2(), [this._o[0]]);
-    return this._o;
+    useEffect(() => this._notify2(), [this._out[0]]);
+    return this._out;
   }
 
   useNonHost() {
@@ -71,7 +71,7 @@ export class Hookleton {
       return () => this._up.delete(updater); // on unmount
     }, []);
 
-    return this._o;
+    return this._out;
   }
 
   _init({ refUse, initialArgs }) {
@@ -80,7 +80,7 @@ export class Hookleton {
       this._h = true;
 
       // init "The source of truth"
-      this._o = [];
+      this._out = [];
 
       // now current `use Hook` component is the hookleton 'Host'
       refUse.current = true;
@@ -96,10 +96,10 @@ export class Hookleton {
   }
 
   _notify() {
-    // `out[0]` is passed to updater. This value is not use here,
+    // `_out[0]` is passed to updater. This value is not use here,
     // but could be useful for libs that extends Hookleton
     // by CONVENTION `out[0]` it is assumed that is the state
-    this._up.forEach(updater => updater(this._o[0]));
+    this._up.forEach(updater => updater(this._out[0]));
   }
 }
 
