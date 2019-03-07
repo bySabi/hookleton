@@ -187,7 +187,7 @@ Hookleton solves the problem of `use` creating Closed components. Has a very low
 
 # TL;DR
 
-Use React Context as little as possible, only in cases where it is strictly necessary. If you need to handle global data, consider the Hookletons.
+Use React Context as little as possible, if you need to handle global data, consider the Hookletons.
 1. They are easy to create
 2. They are easy to use and understand
 3. They are easy to reuse
