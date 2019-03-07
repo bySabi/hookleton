@@ -156,7 +156,7 @@ The reality is that it is very easy for this to happen. Look at everything you h
 
 And this is where we hit the *High Cognitive Load* of the Context, you must remember these points in order to make it work. But the Law of *The Magical number [7 ± 2](https://en.wikipedia.org/wiki/The_Magical_Number_Seven,_Plus_or_Minus_Two)* applies to all of us, my friend. The solutions that require a lot of cognitive load are the most error-prone and are the ones that you should use less frequently. 
 
-If this is so complicated with a single Context object imagine the nightmare of placing more than one. A priori it does not seem complicated, it would be enough to nest one Context inside another but the problem is where you place the **true providers**, which feed the *prop* `value` of the `<Counter.Provider>`?. This is one of the reasons why React Context do **not scale**
+If this is so complicated with a single Context object imagine the nightmare of placing more than one. A priori it does not seem complicated, it would be enough to nest one Context inside another but the problem is where you place the **true providers**, which feed the *prop* `value` of the `<Context.Provider>`?. This is one of the reasons why React Context do **not scale**
 
 React Context based components are easy to `reuse` but not so easy to `use`. If you go too far beyond it is intended purpose you may have a problem of **Overenginering**
 
