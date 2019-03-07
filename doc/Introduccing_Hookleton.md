@@ -183,7 +183,7 @@ The problem with **CoC** has always been there, linked to the React Contexts, bu
 
 But the most important question is whether you are more concerned with `using` or `reusing` your components. Everywhere it is recommended to develop for reuse but I do not think anyone recommends something like this.
 
-Hookleton solves the problem of `use` creating Closed components. Has a very low cognitive load and, if that were not enough, it also solves the CoC. If you want to know more you can go [here](https://github.com/bySabi/hookleton) and ask its author.
+Hookleton solves the problem of `use`, creating Closed components. Has a very low cognitive load and, if that were not enough, it also solves the CoC. If you want to know more you can go [here](https://github.com/bySabi/hookleton) and ask its author.
 
 # TL;DR
 
