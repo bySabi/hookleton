@@ -35,6 +35,11 @@ export default () => (
         </Link>
       </li>
       <li>
+        <Link href="/counterNested">
+          <a>Counters on multiple nested context</a>
+        </Link>
+      </li>
+      <li>
         <Link href="/fetch">
           <a>Fetch</a>
         </Link>
@@ -47,6 +52,7 @@ export default () => (
           <a>context-based Counter</a>
         </Link>
       </li>
+
       <li>
         <Link href="/counterHookleton">
           <a>hookleton Counter</a>
