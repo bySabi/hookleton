@@ -5,13 +5,16 @@ import { createHook } from '../src';
 
 let useCounter;
 let useCounter2;
+let useCounter3;
+let useCounter4;
 let CounterCtx;
 let CounterCtx2;
 let CounterCtx3;
+let CounterCtx4;
 let Count;
 let Count2;
+let Count4;
 let Counter;
-let useCounter3;
 
 const counter = (initial = 0) => {
   const [count, setCount] = React.useState(initial);
@@ -20,16 +23,35 @@ const counter = (initial = 0) => {
   return [count, setCount, { increment, decrement }];
 };
 
+function reducer(state, action) {
+  switch (action.type) {
+    case 'increment':
+      return { count: state.count + 1 };
+    case 'decrement':
+      return { count: state.count - 1 };
+    case 'reset':
+      return init(action.payload);
+    default:
+      throw new Error();
+  }
+}
+
+const initialState = { count: 0 };
+
 beforeEach(() => {
   useCounter = createHook(React.useState);
   useCounter2 = createHook(React.useState, 1);
   useCounter3 = createHook(counter);
+  useCounter4 = createHook(({ reducer, initialState }) => React.useReducer(reducer, initialState));
+
   CounterCtx = useCounter.Provider;
   CounterCtx2 = useCounter2.Provider;
   CounterCtx3 = useCounter3.Provider;
+  CounterCtx4 = useCounter4.Provider;
 
   Count = () => <>Count: {useCounter()[0]}</>;
   Count2 = ({ id }) => <span data-testid={id}>Count2: {useCounter2()[0]}</span>;
+  Count4 = ({ id }) => <span data-testid={id}>Count4: {useCounter4()[0].count}</span>;
 
   Counter = ({ id }) => {
     const [count, setCount, { increment, decrement }] = useCounter3();
@@ -201,6 +223,15 @@ test('should return first value array from initial array param from Counter cont
   );
   // JSX {[3,5,6]} output => 356
   expect(getByText(/^Count:/).textContent).toBe('Count: 356');
+});
+
+test('should pass context props like a initial object to hook', () => {
+  const { getByText } = render(
+    <CounterCtx4 reducer={reducer} initialState={initialState}>
+      <Count4 />
+    </CounterCtx4>
+  );
+  expect(getByText(/^Count4:/).textContent).toBe('Count4: 0');
 });
 
 test('should apply initial context params policy', () => {

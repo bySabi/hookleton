@@ -48,7 +48,7 @@ export default () => (
         <p>----- Hookleton vs React Context -----</p>
       </li>
       <li>
-        <Link href="/counterContext">
+        <Link href="/counterConstate">
           <a>context-based Counter</a>
         </Link>
       </li>

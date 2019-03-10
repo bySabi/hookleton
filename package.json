@@ -16,6 +16,7 @@
     "clean": "rm -rf lib",
     "build": "rollup -c",
     "test": "jest --coverage --ci",
+    "test:this": "jest -t 'should pass context props like a initial object to hook'",
     "coveralls": "cat ./coverage/lcov.info | coveralls",
     "prepare": "npm run clean && npm run build",
     "prettier": "pretty-quick"

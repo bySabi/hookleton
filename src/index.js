@@ -15,7 +15,8 @@ export function createHookWithClass(HookletonClass, useHook, ...initial) {
 }
 
 function provider(Provider, use) {
-  return function HookletonCtx({ initial, children }) {
+  return function HookletonCtx(props) {
+    const { children, ...initial } = props;
     const value = { initial }; // hookleton ctx object
     return React.createElement(
       Provider,
@@ -107,14 +108,20 @@ export class Hookleton extends HookletonCore {
       // now current `use Hook` component is the hookleton 'Host'
       refUse.current = true;
 
-      // This 'initial' come from <hookleton context Provider initial={}> and always has priority
-      if (ctx.initial !== undefined) {
-        // **IMPORTANT** 'initial' is passed like array of arguments. Ex
-        //   <Counter initial={[reducer, initialState]}> is untouched.
-        //   <Counter initial="example"> is converted to ["example"]
+      // This 'initial' come from <hookleton context Provider value={ props }> and always has priority
+      if (Object.keys(ctx.initial).length !== 0) {
+        //  console.log(ctx.initial)
+        // **IMPORTANT** 'initialArg' is passed like array of arguments. Ex
+        //   <Counter initialArg={[reducer, initialState]}> is untouched.
+        //   <Counter initialArg="example"> is converted to ["example"]
         // When a user need to pass an array has to be done this way
-        //   <Counter initial={[[1,2,4]]} >
-        ctx.arg = Array.isArray(ctx.initial) ? ctx.initial : [ctx.initial];
+        //   <Counter initialArg={[[1,2,4]]} >
+        if (ctx.initial.initialArg) {
+          const initialArg = ctx.initial.initialArg;
+          ctx.arg = Array.isArray(initialArg) ? initialArg : [initialArg];
+        } else {
+          ctx.arg = [ctx.initial];
+        }
       } else {
         // Passed arguments on `use Hook` creation have more priority than args from Host `use Hook` call
         ctx.arg = this._arg.length > 0 ? this._arg : initial;
