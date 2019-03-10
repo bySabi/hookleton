@@ -15,7 +15,7 @@
 
 _Hookleton_ convert any React Hook in a global hook. A global hook is a function that returns always the same result every time its called. Let's call this result, the hook runtime _interface_.
 
-When this Hook is **use***d* for the first time its `host` component will become a **Singleton** of it, hence the name **Hookleton**. Naming is hard!, you know.
+When this Hook is **use\***d\* for the first time its `host` component will become a **Singleton** of it, hence the name **Hookleton**. Naming is hard!, you know.
 
 That said, it might sound a bit complicated but it is not. `Hookleton` was created thinking about the ease of use even for an occasional user with the minimum effort. It is likely that when you try it you will not want to use something else because there simply is nothing easier out there.
 
@@ -30,7 +30,7 @@ Does _Hookleton_ make your life a little more easy? Consider <a href="https://ww
 - Very fast, as fast as the React Hook _runtime_
 - Works in any environment that supports React Hook: _React Native_, _React Server-Side Rendering ([next.js](https://github.com/zeit/next.js/))_, _[Proto Native](https://github.com/kusti8/proton-native)_, ...
 - Extensible by advanced users
-- Very low cognitive load -- [React context Vs Hookletons](./doc/ContextVsHookletons.md)
+- Very low cognitive load
 
 ## Install
 
@@ -115,6 +115,7 @@ Examples [page](https://bysabi.github.io/hookleton/) include:
 - 5 counters in 25 components. Include a basic `global store` [page](https://bysabi.github.io/hookleton/counters5x5/) | [source](./example/pages/counters5x5.js)
 - 5 counters in 400 components. Default non-blocking renderer [page](https://bysabi.github.io/hookleton/counters10x40/) | [source](./example/pages/counters10x40.js)
 - 5 counters in 400 components. With a custom blocking renderer [page](https://bysabi.github.io/hookleton/counters10x40blocking/) | [source](./example/pages/counters10x40blocking.js)
+- 10 counters in multiple nested context [page](https://bysabi.github.io/hookleton/counterNested/) | [source](./example/pages/counterNested.js)
 - showing Fetched 10 random users data in 16 components [page](https://bysabi.github.io/hookleton/fetch/) | [source](./example/pages/fetch.js)
 
 How would it be with React Context vs Hookletons?

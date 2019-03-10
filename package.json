@@ -1,6 +1,6 @@
 {
   "name": "hookleton",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "globalize your React Hooks without fear using the Hookleton Pattern",
   "main": "lib/index.js",
   "react-native": "lib/index.js",

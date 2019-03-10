@@ -55,6 +55,10 @@ export default () => (
     <CounterContainer>
       <Count />
       <Button />
+      <CounterContainer initial={3}>
+        <Count />
+        <Button />
+      </CounterContainer>
     </CounterContainer>
   </>
 );
