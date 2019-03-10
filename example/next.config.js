@@ -13,6 +13,7 @@ module.exports = {
     '/counters5x5': { page: '/counters5x5' },
     '/counters10x40': { page: '/counters10x40' },
     '/counters10x40blocking': { page: '/counters10x40blocking' },
+    '/counterNested': { page: '/counterNested' },
     '/fetch': { page: '/fetch' },
     '/counterContext': { page: '/counterContext' },
     '/counterHookleton': { page: '/counterHookleton' },

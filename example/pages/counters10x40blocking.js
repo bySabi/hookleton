@@ -2,9 +2,10 @@ import { useState, useLayoutEffect } from 'react';
 import { createHookWithClass, Hookleton } from 'hookleton';
 
 class Hookleton2 extends Hookleton {
-  useHost() {
-    useLayoutEffect(this._notify2.bind(this), [this._out[0]]);
-    return this._out;
+  useHost(ctx) {
+    // notify to all non-host on each `out[0]` update
+    useLayoutEffect(() => ctx.notify(), [ctx.out[0]]);
+    return ctx.out;
   }
 }
 

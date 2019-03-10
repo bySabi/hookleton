@@ -8,6 +8,7 @@ const RM = [
   '../counters5x5',
   '../counters10x40',
   '../counters10x40blocking',
+  '../counterNested',
   '../fetch',
   '../mouse',
   '../todo',
