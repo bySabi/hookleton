@@ -14,6 +14,8 @@ const useMousePosition = createHook(() => {
   return [position];
 });
 
+const MouseHost = () => (useMousePosition.use(), null);
+
 const Mouse = () => {
   const [mousePosition] = useMousePosition();
   return (
@@ -44,17 +46,17 @@ const Any = () => {
   return <p style={{ color: 'red' }}>I should be rendered ONE time but: {++c}</p>;
 };
 
-// repeat <TableMouse /> 50 times
+// repeat <TableMouse /> 100 times
 export default () => (
   <>
     <Any />
+    <MouseHost />
     <ul style={{ listStyle: 'none' }}>
-      {Array.from({ length: 50 }).map((_, idx) => (
+      {Array.from({ length: 100 }).map((_, idx) => (
         <li key={idx}>
           <TableMouse />
         </li>
       ))}
     </ul>
-    <Any />
   </>
 );
