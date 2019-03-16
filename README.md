@@ -24,7 +24,7 @@ Does _Hookleton_ make your life a little more easy? Consider <a href="https://ww
 ## Benefits
 
 - Zero dependencies (only React Hook)
-- Small size [![size](http://img.badgesize.io/https://cdn.jsdelivr.net/npm/hookleton/lib/index.js?compression=gzip)](http://img.badgesize.io/https://cdn.jsdelivr.net/npm/hookleton/lib/index.js)
+- Small size, ~50 *LOC* [![size](http://img.badgesize.io/https://cdn.jsdelivr.net/npm/hookleton/lib/index.js?compression=gzip)](http://img.badgesize.io/https://cdn.jsdelivr.net/npm/hookleton/lib/index.js)
 - Simple API
 - Low Memory Consumption and CPU Usage
 - Very fast, as fast as the React Hook _runtime_
