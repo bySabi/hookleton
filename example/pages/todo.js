@@ -14,7 +14,7 @@ const useStore = createHook(init => {
 
 const TodoForm = () => {
   const [todo, setTodo] = useState('');
-  const [, { add }] = useStore(initial);
+  const [, { add }] = useStore.use(initial);
 
   const handleTodoChange = e => setTodo(e.target.value);
   const handleTodoAdd = () => {

@@ -24,7 +24,7 @@ const useFetchUsers = createHook(() => {
 });
 
 const Hookletons = () => {
-  useFetchUsers();
+  useFetchUsers.use();
   return null;
 };
 

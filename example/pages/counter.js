@@ -16,11 +16,13 @@ const Decrement = () => {
   return <button onClick={decrement}>-</button>;
 };
 
+// The host component
 const Value = () => {
-  const [count] = useCounter(0);
+  const [count] = useCounter.use(0);
   return <span>{count}</span>;
 };
 
+// Value componet must be at the top
 export default () => (
   <div>
     <Value />

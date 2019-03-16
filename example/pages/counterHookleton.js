@@ -19,7 +19,7 @@ export const reducer = (state, action) => {
 const useCounter = createHook(useReducer);
 
 const Counter = () => {
-  const [store, dispatch] = useCounter(reducer, initialState);
+  const [store, dispatch] = useCounter.use(reducer, initialState);
   return (
     <div>
       <p>You clicked {store.count} times</p>

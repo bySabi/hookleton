@@ -20,26 +20,6 @@ export default () => (
         </Link>
       </li>
       <li>
-        <Link href="/counters5x5">
-          <a>Counters 5x5</a>
-        </Link>
-      </li>
-      <li>
-        <Link href="/counters10x40">
-          <a>Counters 10x40</a>
-        </Link>
-      </li>
-      <li>
-        <Link href="/counters10x40blocking">
-          <a>Counters 10x40 blocking</a>
-        </Link>
-      </li>
-      <li>
-        <Link href="/counterNested">
-          <a>Counters on multiple nested context</a>
-        </Link>
-      </li>
-      <li>
         <Link href="/fetch">
           <a>Fetch</a>
         </Link>
@@ -52,7 +32,6 @@ export default () => (
           <a>context-based Counter</a>
         </Link>
       </li>
-
       <li>
         <Link href="/counterHookleton">
           <a>hookleton Counter</a>

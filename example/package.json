@@ -19,10 +19,12 @@
   "author": "Félix A.A. <bysabi.files@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "hookleton": "^0.3.0",
+    "constate": "^1.0.0",
+    "hookleton": "^0.4.0",
     "next": "^8.0.2",
     "react": "^16.8.3",
-    "react-dom": "^16.8.3"
+    "react-dom": "^16.8.3",
+    "victory": "^32.0.2"
   },
   "devDependencies": {
     "fs-extra": "^7.0.1"

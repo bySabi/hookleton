@@ -14,6 +14,8 @@ const useMousePosition = createHook(() => {
   return [position];
 });
 
+const MouseHost = () => (useMousePosition.use(), null);
+
 const Mouse = () => {
   const [mousePosition] = useMousePosition();
   return (
@@ -38,13 +40,16 @@ const TableMouse = () => (
   </table>
 );
 
-// repeat <TableMouse /> 50 times
+// repeat <TableMouse /> 100 times
 export default () => (
-  <ul style={{ listStyle: 'none' }}>
-    {Array.from({ length: 50 }).map((_, idx) => (
-      <li key={idx}>
-        <TableMouse />
-      </li>
-    ))}
-  </ul>
+  <>
+    <MouseHost />
+    <ul style={{ listStyle: 'none' }}>
+      {Array.from({ length: 100 }).map((_, idx) => (
+        <li key={idx}>
+          <TableMouse />
+        </li>
+      ))}
+    </ul>
+  </>
 );
