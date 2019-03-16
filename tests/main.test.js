@@ -4,10 +4,15 @@ import { createHook } from '../src';
 
 let useCounter;
 let useCounter2;
+let useCounter3;
 
 beforeEach(() => {
   useCounter = createHook(React.useState);
   useCounter2 = createHook(React.useState, 1);
+  useCounter3 = createHook(i => {
+    const [s, set] = React.useState(i);
+    return { count: s, setCount: set };
+  });
 });
 
 const useNonCompliant = createHook(() => null);
@@ -56,6 +61,23 @@ test('should shared hook output', () => {
   });
   const [count] = out2;
   expect(count).toBe(2);
+  expect(out1).toBe(out2);
+});
+
+test('should shared hook output#2', () => {
+  let out1;
+  renderHook(() => (out1 = useCounter3.use(1)));
+  let out2;
+  renderHook(() => (out2 = useCounter3()));
+  expect(out1).toBe(out2);
+
+  const { setCount } = out1;
+  act(() => {
+    setCount(2);
+  });
+  const { count } = out2;
+  expect(count).toBe(2);
+
   expect(out1).toBe(out2);
 });
 
