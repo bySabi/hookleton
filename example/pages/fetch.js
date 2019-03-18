@@ -18,7 +18,7 @@ const useFetchUsers = createHook(() => {
     fetchData();
   }, [again]);
 
-  const fetchAgain = () => updater(s => ~s);
+  const fetchAgain = useCallback(() => updater(s => ~s), []);
 
   return [users, fetchAgain];
 });

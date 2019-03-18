@@ -93,7 +93,7 @@ The `Value` component is the **host** of `useCounter` hookleton for being the fi
 Remember that `useCounter` is **composing** a `useState` which is where all the logic happens.
 
 ## a single convention
-Only one component, the `host`, can call created *hookleton* `use` hook and this component must be at the top of components of the hierarchy.   
+Only one component, the `host`, can call created *hookleton* `use` hook and this component must be at the top of the component hierarchy.   
 
 
 ## more Examples

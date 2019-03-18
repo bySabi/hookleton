@@ -10,6 +10,11 @@ export default () => (
         </Link>
       </li>
       <li>
+        <Link href="/mouse">
+          <a>Mouse</a>
+        </Link>
+      </li>
+      <li>
         <Link href="/counter">
           <a>Counter</a>
         </Link>
