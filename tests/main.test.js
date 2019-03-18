@@ -15,8 +15,6 @@ beforeEach(() => {
   });
 });
 
-const useNonCompliant = createHook(() => null);
-
 afterEach(cleanup);
 
 test('should return initial counter value', () => {
