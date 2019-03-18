@@ -55,11 +55,14 @@ test('should shared hook output', () => {
   renderHook(() => (out2 = useCounter()));
   expect(out1).toBe(out2);
 
+  let [count] = out2;
+  expect(count).toBe(1);
+
   const [, setCount] = out1;
   act(() => {
     setCount(2);
   });
-  const [count] = out2;
+  [count] = out2;
   expect(count).toBe(2);
   expect(out1).toBe(out2);
 });
@@ -71,11 +74,15 @@ test('should shared hook output#2', () => {
   renderHook(() => (out2 = useCounter3()));
   expect(out1).toBe(out2);
 
+  let { count } = out2;
+  expect(count).toBe(1);
+
   const { setCount } = out1;
   act(() => {
     setCount(2);
   });
-  const { count } = out2;
+
+  count = out2.count;
   expect(count).toBe(2);
 
   expect(out1).toBe(out2);
