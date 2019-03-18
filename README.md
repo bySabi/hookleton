@@ -6,7 +6,7 @@
 
 [![npm](https://img.shields.io/npm/v/hookleton.svg)](https://www.npmjs.com/package/hookleton)
 [![npm downloads](https://img.shields.io/npm/dm/hookleton.svg?style=flat-square)](https://www.npmjs.com/package/hookleton)
-[![size](http://img.badgesize.io/https://cdn.jsdelivr.net/npm/hookleton/lib/index.js?compression=gzip)](http://img.badgesize.io/https://cdn.jsdelivr.net/npm/hookleton/lib/index.js)
+[![size](https://img.shields.io/bundlephobia/minzip/hookleton.svg?style=flat)](https://www.npmjs.com/package/hookleton)
 [![Coverage Status](https://coveralls.io/repos/github/bySabi/hookleton/badge.svg?branch=master)](https://coveralls.io/github/bySabi/hookleton?branch=master)
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://opensource.org/licenses/MIT)
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/bySabi/10)
@@ -24,7 +24,7 @@ Does _Hookleton_ make your life a little more easy? Consider <a href="https://ww
 ## Benefits
 
 - Zero dependencies (only React Hook)
-- Small size, ~50 *LOC* [![size](http://img.badgesize.io/https://cdn.jsdelivr.net/npm/hookleton/lib/index.js?compression=gzip)](http://img.badgesize.io/https://cdn.jsdelivr.net/npm/hookleton/lib/index.js)
+- Small size, ~50 *LOC* [![size](https://img.shields.io/bundlephobia/minzip/hookleton.svg?style=flat)](https://www.npmjs.com/package/hookleton)
 - Simple API
 - Low Memory Consumption and CPU Usage
 - Very fast, as fast as the React Hook _runtime_
