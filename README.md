@@ -41,12 +41,17 @@ Does _Hookleton_ make your life a little more easy? Consider <a href="https://ww
 
 The Hookleton package exposes `createHook` function that does all.
 
-`createHook(useHook, initial?): useHookleton`
+`createHook(useHook, ...initial?): useHookleton`
 
+### Parameters
 - `useHook` is the user provide Hook
-- `initial` any params that _useHook_ will accept
+- `initial` any number of params that _useHook_ will accept
+
+### Returns
 - `useHookleton` returned Hookleton. Called by *non-host* components
 - `useHookleton.use` returned Hookleton. Called by **the host** component
+- `useHookleton.get` function that get the current output of the Hookleton.
+For standalone use
 
 ## usage Example
 

@@ -1,17 +1,24 @@
 import { useMemo, useReducer, useLayoutEffect } from 'react';
 
-export function createHook(useHook, ...initial) {
-  const hookleton = new Hookleton(useHook, initial);
+export function createHookWithClass(HookletonClass, useHook, ...initial) {
+  const hookleton = new HookletonClass(useHook, initial);
   // non-Host hook
   function useFn() {
     return hookleton.use.apply(hookleton, arguments);
   }
-  useFn.get = () => hookleton._ctx.out; // for use standalone
   // Host hook
   useFn.use = function() {
     return hookleton._useHost.apply(hookleton, arguments);
   };
+  // for use standalone
+  useFn.get = function() {
+    return hookleton.get.apply(hookleton, arguments);
+  };
   return useFn;
+}
+
+export function createHook(useHook, ...initial) {
+  return createHookWithClass.apply(null, [Hookleton, useHook].concat(initial));
 }
 
 export class Hookleton {
@@ -64,6 +71,10 @@ export class Hookleton {
       console.error("[Hookleton] missing 'Host'");
     }, []);
     return ctx.out;
+  }
+
+  get() {
+    return this._ctx.out;
   }
 }
 
