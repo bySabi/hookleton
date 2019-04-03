@@ -1,7 +1,7 @@
 import { useMemo, useReducer, useLayoutEffect } from 'react';
 
-export function createHookWithClass(HookletonClass, useHook, ...initial) {
-  const hookleton = new HookletonClass(useHook, initial);
+export function createHook(useHook, ...initial) {
+  const hookleton = new Hookleton(useHook, initial);
   // non-Host hook
   function useFn() {
     return hookleton.use.apply(hookleton, arguments);
@@ -15,10 +15,6 @@ export function createHookWithClass(HookletonClass, useHook, ...initial) {
     return hookleton.get.apply(hookleton, arguments);
   };
   return useFn;
-}
-
-export function createHook(useHook, ...initial) {
-  return createHookWithClass.apply(null, [Hookleton, useHook].concat(initial));
 }
 
 export class Hookleton {
