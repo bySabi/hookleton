@@ -12,7 +12,7 @@ export function createHook(useHook, ...initial) {
   };
   // for use standalone
   useFn.get = function() {
-    return hookleton.get.apply(hookleton, arguments);
+    return hookleton.get.call(hookleton);
   };
   return useFn;
 }
