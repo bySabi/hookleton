@@ -173,6 +173,7 @@ const App = () => (
 )
 
 ```
+4. When standalone API,`.get()`, the return value will be an **empty** array if it is called before render the component that *host* the *hookleton*
 
 ## Performance
 
