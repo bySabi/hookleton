@@ -1,4 +1,3 @@
-import React from 'react';
 import NextJsLink from 'next/link';
 
 const assetPrefix = process.env.ASSET_PREFIX;
