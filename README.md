@@ -5,7 +5,6 @@
 </h1>
 
 [![npm](https://img.shields.io/npm/v/hookleton.svg)](https://www.npmjs.com/package/hookleton)
-[![npm downloads](https://img.shields.io/npm/dm/hookleton.svg?style=flat-square)](https://www.npmjs.com/package/hookleton)
 [![size](https://img.shields.io/bundlephobia/minzip/hookleton.svg?style=flat)](https://www.npmjs.com/package/hookleton)
 [![Coverage Status](https://coveralls.io/repos/github/bySabi/hookleton/badge.svg?branch=master)](https://coveralls.io/github/bySabi/hookleton?branch=master)
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://opensource.org/licenses/MIT)
@@ -53,6 +52,9 @@ The Hookleton package exposes `createHook` function that does all.
 - `useHookleton.get` function that get the current output of the Hookleton.
 For standalone use
 
+### a single convention
+Only one component, the `host`, can call created *hookleton* `use` hook and this component must be at the top of the component hierarchy.
+
 ## usage Example
 
 A simple example is worth a thousand words
@@ -97,9 +99,9 @@ export default () => (
 The `Value` component is the **host** of `useCounter` hookleton for being the first component of the hierarchy that call `useCounter.use`.
 Remember that `useCounter` is **composing** a `useState` which is where all the logic happens.
 
-## a single convention
-Only one component, the `host`, can call created *hookleton* `use` hook and this component must be at the top of the component hierarchy.   
-
+## hookleton based modules
+The Hookleton library includes only the minimal *core* code needed to maintain state synchronization between the users of the hookleton but was designed to be fully extensible. Take a look at these projects, it could be useful:
+- [Garfio](https://github.com/bySabi/garfio) for extending Hookleton Pattern namespaces and more
 
 ## more Examples
 
