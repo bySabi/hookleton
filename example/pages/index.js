@@ -1,28 +1,26 @@
 import Link from 'next/link';
 
-const PREFIX = '/hookleton';
-
 export default () => (
   <div style={{ textAlign: 'center' }}>
     <h1>Hookleton usage examples</h1>
     <ul style={{ listStyle: 'none' }}>
       <li>
-        <Link href={`${PREFIX}/todo`}>
+        <Link href="/todo">
           <a>Todo</a>
         </Link>
       </li>
       <li>
-        <Link href={`${PREFIX}/mouse`}>
+        <Link href="/mouse">
           <a>Mouse</a>
         </Link>
       </li>
       <li>
-        <Link href={`${PREFIX}/counter`}>
+        <Link href="/counter">
           <a>Counter</a>
         </Link>
       </li>
       <li>
-        <Link href={`${PREFIX}/fetch`}>
+        <Link href="/fetch">
           <a>Fetch</a>
         </Link>
       </li>
@@ -30,22 +28,22 @@ export default () => (
         <p>----- Hookleton vs React Context -----</p>
       </li>
       <li>
-        <Link href={`${PREFIX}/counterContext`}>
+        <Link href="/counterContext">
           <a>context-based Counter</a>
         </Link>
       </li>
       <li>
-        <Link href={`${PREFIX}/counterHookleton`}>
+        <Link href="/counterHookleton">
           <a>hookleton Counter</a>
         </Link>
       </li>
       <li>
-        <Link href={`${PREFIX}/mouseContext`}>
+        <Link href="/mouseContext">
           <a>context-based Mouse</a>
         </Link>
       </li>
       <li>
-        <Link href={`${PREFIX}/mouseHookleton`}>
+        <Link href="/mouseHookleton">
           <a>hookleton Mouse</a>
         </Link>
       </li>
