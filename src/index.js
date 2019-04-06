@@ -1,4 +1,4 @@
-import { useMemo, useReducer, useLayoutEffect } from 'react';
+import { useMemo, useReducer, useEffect } from 'react';
 
 export function createHook(useHook, ...initial) {
   const hookleton = new Hookleton(useHook, initial);
@@ -59,7 +59,7 @@ export class Hookleton {
   useNonHost(ctx) {
     // state is ignore because we have only one state already set in 'hookleton'
     const [, updater] = useReducer(forceUpdate);
-    useLayoutEffect(() => {
+    useEffect(() => {
       if (ctx.up) {
         ctx.up.set(updater, updater);
         return () => ctx.up.delete(updater);
