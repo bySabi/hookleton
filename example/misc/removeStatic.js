@@ -12,7 +12,8 @@ const RM = [
   '../counterHookleton',
   '../mouseContext',
   '../mouseHookleton',
-  '../index.html'
+  '../index.html',
+  '../.nojekyll'
 ];
 
 RM.forEach(p => fs.removeSync(__dirname + '/../' + p));

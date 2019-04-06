@@ -1,5 +1,6 @@
-const fs = require('fs-extra')
+const fs = require('fs-extra');
 
-fs
-  .copy('.next/static', 'out/_next/static')
-  .then(() => console.log('Copied static dir succesfully'))
+const FILE = 'out/.nojekyll';
+
+fs.ensureFileSync(FILE);
+fs.copySync('.next/static', 'out/_next/static');

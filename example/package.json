@@ -7,9 +7,10 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "export:gh-pages": "next build && next export && node misc/copyStatic.js",
+    "export:gh-pages": "next build && next export && node misc/copyStatic.js && node misc/copyAll.js",
+    "export:local": "NODE_ENV=development next build && NODE_ENV=development next export && node misc/copyStatic.js",
     "cleanup": "node misc/removeStatic.js",
-    "deploy": "npm run cleanup && npm run export:gh-pages && cp -fr out/* ../"
+    "deploy": "npm run cleanup && npm run export:gh-pages"
   },
   "keywords": [
     "Example",
@@ -20,9 +21,9 @@
   "dependencies": {
     "constate": "^1.0.0",
     "hookleton": "^0.4.6",
-    "next": "^8.0.2",
-    "react": "^16.8.3",
-    "react-dom": "^16.8.3",
+    "next": "^8.0.4",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
     "victory": "^32.0.2"
   },
   "devDependencies": {
