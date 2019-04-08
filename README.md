@@ -20,6 +20,10 @@ That said, it might sound a bit complicated but it is not. `Hookleton` was creat
 
 Does _Hookleton_ make your life a little more easy? Consider <a href="https://www.buymeacoffee.com/4H8KhlSxM" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
 
+## Design pattern definition
+The *Hookleton Pattern* is a software design pattern that restricts the calls to a provided React Hook to a single component and uses a pub/sub mechanism to manage communication with the rest of user components of the hook
+
+
 ## Benefits
 
 - Zero dependencies (only React Hook)
