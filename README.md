@@ -12,7 +12,7 @@
 
 > globalize your React Hooks without fear using the Hookleton Pattern
 
-_Hookleton_ convert any React Hook in a global hook. A global hook is a function that returns always the same result every time its called. Let's call this result, the hook runtime _interface_.
+_Hookleton_ convert any React Hook in a global hook. A global hook is a function that always returns the same result to each place where it is called. Let's call this result, the hook runtime _interface_.
 
 When this Hook is **use***d* for the first time its `host` component will become a **Singleton** of it, hence the name **Hookleton**. Naming is hard!, you know.
 
