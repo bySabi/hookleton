@@ -35,10 +35,16 @@ The *Hookleton Pattern* is a software design pattern that restricts the calls to
 - Extensible
 - Very low cognitive load
 
-## Install
+## Installation
 
-- NPM: `npm i hookleton`
-- Yarn: `yarn add hookleton`
+```bash
+# NPM
+npm i hookleton
+
+# Yarn
+yarn add hookleton
+
+```
 
 ## a simple API
 
