@@ -129,6 +129,9 @@ How would it be with React Context vs Hookletons?
 - _Mouse_ based on React Context [page](https://bysabi.github.io/hookleton/mouseContext/) | [source](/example/pages/mouseContext.js)
 - _Mouse_ with Hookletons [page](https://bysabi.github.io/hookleton/mouseHookleton/) | [source](/example/pages/mouseHookleton.js)
 
+## External resources
+* Medium: [Introduccing Hookleton: How to avoid the “Coupling of Concerns(CoC)” in React Apps](https://medium.com/introduccing-hookleton-a-simple-solution-to-coc/introduccing-hookleton-how-to-avoid-the-coupling-of-concerns-coc-in-react-apps-383322e5bc3)
+
 ## How it works
 
 The idea is very simple. The first time that a user component of the Hook is instantiated the hookleton is created and the result of the call to `user Hook` will be _linked_ to the `host` of the hookleton. The `user Hook` is the one you want to _globalize_.
