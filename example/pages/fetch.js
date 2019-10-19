@@ -60,7 +60,7 @@ const Gender = ({ gender }) => <span>{gender}</span>;
 
 const Location = ({ location }) => (
   <span>
-    {location.street}, {location.city}, {location.state}
+    {location.city}, {location.state}
   </span>
 );
 
