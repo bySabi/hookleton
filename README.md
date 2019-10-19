@@ -19,6 +19,7 @@ cd example
 npm i
 npm run deploy
 cd ..
+git add _next/
 git commit -am 'update gh-pages'
 git push origin gh-pages
 ```
