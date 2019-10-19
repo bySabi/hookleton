@@ -1,0 +1,70 @@
+{
+  "devFiles": [],
+  "pages": {
+    "/": [
+      "static/runtime/webpack-a79426b5e11f0ba5879d.js",
+      "static/chunks/commons.8ade59fb38dcc060bb13.js",
+      "static/runtime/main-92186bd57096fb5c990f.js"
+    ],
+    "/_app": [
+      "static/runtime/webpack-a79426b5e11f0ba5879d.js",
+      "static/chunks/commons.8ade59fb38dcc060bb13.js",
+      "static/runtime/main-92186bd57096fb5c990f.js"
+    ],
+    "/_error": [
+      "static/runtime/webpack-a79426b5e11f0ba5879d.js",
+      "static/chunks/commons.8ade59fb38dcc060bb13.js",
+      "static/runtime/main-92186bd57096fb5c990f.js"
+    ],
+    "/bench": [
+      "static/runtime/webpack-a79426b5e11f0ba5879d.js",
+      "static/chunks/commons.8ade59fb38dcc060bb13.js",
+      "static/runtime/main-92186bd57096fb5c990f.js"
+    ],
+    "/counter": [
+      "static/runtime/webpack-a79426b5e11f0ba5879d.js",
+      "static/chunks/commons.8ade59fb38dcc060bb13.js",
+      "static/runtime/main-92186bd57096fb5c990f.js"
+    ],
+    "/counterContext": [
+      "static/runtime/webpack-a79426b5e11f0ba5879d.js",
+      "static/chunks/commons.8ade59fb38dcc060bb13.js",
+      "static/runtime/main-92186bd57096fb5c990f.js"
+    ],
+    "/counterHookleton": [
+      "static/runtime/webpack-a79426b5e11f0ba5879d.js",
+      "static/chunks/commons.8ade59fb38dcc060bb13.js",
+      "static/runtime/main-92186bd57096fb5c990f.js"
+    ],
+    "/fetch": [
+      "static/runtime/webpack-a79426b5e11f0ba5879d.js",
+      "static/chunks/commons.8ade59fb38dcc060bb13.js",
+      "static/runtime/main-92186bd57096fb5c990f.js"
+    ],
+    "/index": [
+      "static/runtime/webpack-a79426b5e11f0ba5879d.js",
+      "static/chunks/commons.8ade59fb38dcc060bb13.js",
+      "static/runtime/main-92186bd57096fb5c990f.js"
+    ],
+    "/mouse": [
+      "static/runtime/webpack-a79426b5e11f0ba5879d.js",
+      "static/chunks/commons.8ade59fb38dcc060bb13.js",
+      "static/runtime/main-92186bd57096fb5c990f.js"
+    ],
+    "/mouseContext": [
+      "static/runtime/webpack-a79426b5e11f0ba5879d.js",
+      "static/chunks/commons.8ade59fb38dcc060bb13.js",
+      "static/runtime/main-92186bd57096fb5c990f.js"
+    ],
+    "/mouseHookleton": [
+      "static/runtime/webpack-a79426b5e11f0ba5879d.js",
+      "static/chunks/commons.8ade59fb38dcc060bb13.js",
+      "static/runtime/main-92186bd57096fb5c990f.js"
+    ],
+    "/todo": [
+      "static/runtime/webpack-a79426b5e11f0ba5879d.js",
+      "static/chunks/commons.8ade59fb38dcc060bb13.js",
+      "static/runtime/main-92186bd57096fb5c990f.js"
+    ]
+  }
+}
