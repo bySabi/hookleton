@@ -14,23 +14,25 @@
 
 _Hookleton_ convert any React Hook in a global hook. A global hook is a function that always returns the same result to each place where it is called. Let's call this result, the hook runtime _interface_.
 
-When this Hook is **use***d* for the first time its `host` component will become a **Singleton** of it, hence the name **Hookleton**. Naming is hard!, you know.
+When this Hook is **use\***d\* for the first time its `host` component will become a **Singleton** of it, hence the name **Hookleton**. Naming is hard!, you know.
 
 That said, it might sound a bit complicated but it is not. `Hookleton` was created thinking about the ease of use even for an occasional user with the minimum effort. It is likely that when you try it you will not want to use something else because there simply is nothing easier out there.
 
 Does _Hookleton_ make your life a little more easy? Consider <a href="https://www.buymeacoffee.com/4H8KhlSxM" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
 
 ## Design pattern definition
-The *Hookleton Pattern* is a software design pattern that restricts the calls to a provided React Hook to a single component and uses a pub/sub mechanism to manage communication with the rest of user components of the hook
 
+The _Hookleton Pattern_ is a software design pattern that restricts the calls to a provided React Hook to a single component and uses a pub/sub mechanism to manage communication with the rest of user components of the hook
 
 ## Benefits
 
 - Zero dependencies (only React Hook)
-- Small size, ~50 *LOC* [![gzip size](http://img.badgesize.io/https://npmcdn.com/hookleton/lib/index.js?compression=gzip)]()
+- Small size, ~50 _LOC_ [![gzip size](http://img.badgesize.io/https://npmcdn.com/hookleton/lib/index.js?compression=gzip)]()
 - Simple API
 - Low Memory Consumption and CPU Usage
 - Very fast, as fast as the React Hook _runtime_
+- 👉 without using React Context
+- 👉 not complex user _memoizations_ needed. Out of the box performance
 - Works in any environment that supports React Hook: _React Native_, _React Server-Side Rendering ([next.js](https://github.com/zeit/next.js/))_, _[Proto Native](https://github.com/kusti8/proton-native)_, ...
 - Extensible
 - Very low cognitive load
@@ -53,17 +55,20 @@ The Hookleton package exposes `createHook` function that does all.
 `createHook(useHook, ...initial?): useHookleton`
 
 ### Parameters
+
 - `useHook` is the user provide Hook
 - `initial` any number of params that _useHook_ will accept
 
 ### Returns
-- `useHookleton` returned Hookleton. Called by *non-host* components
+
+- `useHookleton` returned Hookleton. Called by _non-host_ components
 - `useHookleton.use` returned Hookleton. Called by **the host** component
 - `useHookleton.get` function that get the current output of the Hookleton.
-For standalone use
+  For standalone use
 
 ### a single convention
-Only one component, the `host`, can call created *hookleton* `use` hook and this component must be at the top of the component hierarchy.
+
+Only one component, the `host`, can call created _hookleton_ `use` hook and this component must be at the top of the component hierarchy.
 
 ## usage Example
 
@@ -110,7 +115,9 @@ The `Value` component is the **host** of `useCounter` hookleton for being the fi
 Remember that `useCounter` is **composing** a `useState` which is where all the logic happens.
 
 ## hookleton based modules
-The Hookleton library includes only the minimal *core* code needed to maintain state synchronization between the users of the hookleton but was designed to be fully extensible. Take a look at these projects, it could be useful:
+
+The Hookleton library includes only the minimal _core_ code needed to maintain state synchronization between the users of the hookleton but was designed to be fully extensible. Take a look at these projects, it could be useful:
+
 - [Garfio](https://github.com/bySabi/garfio) for extending Hookleton Pattern namespaces and more
 
 ## more Examples
@@ -130,7 +137,8 @@ How would it be with React Context vs Hookletons?
 - _Mouse_ with Hookletons [page](https://bysabi.github.io/hookleton/mouseHookleton/) | [source](/example/pages/mouseHookleton.js)
 
 ## External resources
-* Medium: [Introduccing Hookleton: How to avoid the “Coupling of Concerns(CoC)” in React Apps](https://medium.com/introduccing-hookleton-a-simple-solution-to-coc/introduccing-hookleton-how-to-avoid-the-coupling-of-concerns-coc-in-react-apps-383322e5bc3)
+
+- Medium: [Introduccing Hookleton: How to avoid the “Coupling of Concerns(CoC)” in React Apps](https://medium.com/introduccing-hookleton-a-simple-solution-to-coc/introduccing-hookleton-how-to-avoid-the-coupling-of-concerns-coc-in-react-apps-383322e5bc3)
 
 ## How it works
 
@@ -188,7 +196,8 @@ const App = () => (
 )
 
 ```
-4. When standalone API,`.get()`, the return value will be an **empty** array if it is called before render the component that *host* the *hookleton*
+
+4. When standalone API,`.get()`, the return value will be an **empty** array if it is called before render the component that _host_ the _hookleton_
 
 ## Performance
 
