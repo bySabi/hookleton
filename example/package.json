@@ -16,7 +16,7 @@
   "license": "MIT",
   "dependencies": {
     "constate": "^1.0.0",
-    "next": "^8.0.4",
+    "next": "^9.3.3",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "victory": "^32.0.2"
